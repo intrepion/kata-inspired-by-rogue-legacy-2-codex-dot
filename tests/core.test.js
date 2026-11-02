@@ -1,0 +1,5 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {rng,heirs,makeRooms,cost,upgrade,hit} from '../game/core.js';
+test('seeded rooms are reproducible and end in a boss',()=>{assert.deepEqual(makeRooms(9),makeRooms(9));assert.notDeepEqual(makeRooms(9),makeRooms(10));assert.equal(makeRooms(9)[5].boss,true)});
+test('heir selection contains valid class and trait indices',()=>{let h=heirs(rng(10));assert.equal(h.length,3);for(const x of h){assert.ok(x.classIndex>=0&&x.classIndex<3);assert.ok(x.traitIndex>=0&&x.traitIndex<4)}});
+test('upgrades charge escalating prices only when affordable',()=>{let s={gold:100,vigor:0,might:0};assert.equal(upgrade(s,'vigor'),true);assert.equal(s.gold,50);assert.equal(cost(s.vigor),90);assert.equal(upgrade(s,'vigor'),false);assert.equal(s.vigor,1);assert.equal(upgrade(s,'bad'),false)});
+test('collision excludes separated and touching rectangles',()=>{let a={x:0,y:0,w:10,h:10};assert.equal(hit(a,{x:9,y:9,w:2,h:2}),true);assert.equal(hit(a,{x:10,y:0,w:2,h:2}),false)});
