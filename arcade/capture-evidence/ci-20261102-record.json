@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "workflowCommit": "449bde0626b0408657dcffc1681b67ebce2bb234",
+  "sourceCommit": "eb42177400f04613e5f968ff874b06db12688d1f",
+  "runId": "41512046235",
+  "url": "http://127.0.0.1:4302/",
+  "inputs": {
+    "index.html": "98a8c846fc289e0f3bdc22c688a280050d299d2d4bd28feb1a8c0883d58edceb",
+    "style.css": "73a148a7505a65634a79cbe0d81e530b284aa9fd5c1ff462c54279b8d8ec4e4d",
+    "game/main.js": "49f1b88ba44190cbf2f32a6d3e0d998984305aab1eb71529505ab2d934cb2ab6",
+    "game/core.js": "1b399fa9cfff3e8cd6d48320c8e8ee67627cbdd1ee42741d27946d059aea61b5"
+  },
+  "browser": "153.0.8010.12",
+  "viewport": {
+    "width": 1280,
+    "height": 1000
+  },
+  "seed": 1234,
+  "screenshots": [
+    "heirs-01.png",
+    "heirs-02.png"
+  ]
+}
